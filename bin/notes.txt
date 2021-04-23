@@ -1,0 +1,8 @@
+dmtcp_coordinator
+
+
+
+
+
+./dmtcp_launch --join-coordinator ./a.out
+./dmtcp_restart_script.sh
