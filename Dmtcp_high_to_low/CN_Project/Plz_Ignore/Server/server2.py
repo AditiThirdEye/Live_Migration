@@ -16,7 +16,7 @@ class ClientThread(Thread):
         self.sock = sock
         print " New thread started for "+ip+":"+str(port)
 
-    def run(self):
+    def start(self):
         filename='dmtcp_restart_script.sh'
         f = open(filename,'rb')
         while True:
