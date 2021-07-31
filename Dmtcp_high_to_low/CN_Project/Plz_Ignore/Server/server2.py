@@ -31,8 +31,13 @@ class ClientThread(Thread):
                 break
 
 tcpsock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# AF_INET to set IPv4 protocol
+# SOCK_STREAM for TCP connection
 tcpsock.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
+# SOL_SOCKET  is a socket layer type
+# SO_REUSEADDR to use the same address after TTL(time to live)
 tcpsock.bind((TCP_IP, TCP_PORT))
+# Connect the hostname to port number
 threads = []
 
 while True:
